@@ -1,16 +1,6 @@
 //GRAPH TRAVERSALS
 
-//USES
-//Peer to peer network graph
-//Web crawlers
-//Finding closest matches/recommendations
-//Shortest path problems
-	//-Gps Navigation
-	//-Sovling mazes
-	//-Shortest path to win a game
-
 //DFS - Depth First Search - Explore as far down as possible before going back to neighbor
-
 //BFS - Breadth First Search - Explore sideways as far as possible before going down
 
 //PSEUDOCODE
@@ -30,7 +20,7 @@
 	//create an object to store vertices visited
 	//add starting vertex to the stack and mark it as visited
 	//while the stack is not empty
-		// remove a vertex from the end
+		//remove a vertex from the end
 		//if vertex is not labeled as visited:
 			//add to result list
 			//label vertex as visited
@@ -39,7 +29,7 @@
 //BFS:
 //Searches all the neighbor nodes first before going down a level
 //Instead of using a stack to keep track of what we need to search,
-//use a queue (can use an array with push and unshift)
+//use a queue (can use an array with push and unshift, but real queue would be faster)
 
 
 class Graph {
@@ -160,15 +150,15 @@ class Graph {
 g = new Graph();
 
 g.addVertex("A");
-
 g.addVertex("B");
-
 g.addVertex("C");
-
 g.addVertex("D");
-
 g.addEdge("D", "A");
-
 g.addEdge("B", "A");
-
 g.addEdge("C", "B");
+
+g.bfsTraversalI("B");
+//["B", "A", "C", "D"]
+g.dfsTraversalI("C");
+g.dfsTraversalR("C");
+//["C", "B", "A", "D"]

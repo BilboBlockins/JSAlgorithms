@@ -2,7 +2,7 @@
 //HEAPS:
 
 //There are many different types of heaps:
-//A min and max binary heaps are implemented here:
+//Min and max binary heaps are implemented here:
 //For a binary heap each node can have only 2 children at most.
 //Unlike a binary search tree, there is no order.
 //Max and Min Binary heaps:
